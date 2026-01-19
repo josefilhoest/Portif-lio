@@ -34,7 +34,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         linear-gradient(0deg, transparent 24%, rgba(0, 255, 136, 0.05) 25%, rgba(0, 255, 136, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 136, 0.05) 75%, rgba(0, 255, 136, 0.05) 76%, transparent 77%, transparent),
         linear-gradient(90deg, transparent 24%, rgba(0, 255, 136, 0.05) 25%, rgba(0, 255, 136, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 136, 0.05) 75%, rgba(0, 255, 136, 0.05) 76%, transparent 77%, transparent);
     background-size: 50px 50px;
@@ -285,13 +285,56 @@ nav a:hover {
     box-shadow: 0 0 40px rgba(0, 255, 136, 0.6), 0 0 80px rgba(0, 212, 255, 0.3);
 }
 
+/* ===== SEÇÃO CERTIFICADOS ===== */
+#Area-de-certificação {
+    margin-left: 200px;
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    text-align: center;
+    position: absolute;
+
+}
+
+#Area-de-certificação h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.certificados img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid var(--border-color);
+    position: relative;
+    cursor: pointer;
+    display: inline;
+}
+
+.certificados img:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+    
+    
+
+
 /* ===== SEÇÃO CONTATO ===== */
 #contato {
     padding: 80px 20px;
     max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
 }
+
 #contato h2 {
     font-size: 3rem;
     text-align: center;
@@ -299,6 +342,7 @@ nav a:hover {
     color: var(--primary);
     font-family: 'JetBrains Mono', monospace;
 }
+
 p {
     color: #b0b0b0;
     margin-bottom: 20px;
@@ -308,7 +352,7 @@ p {
 }
 
 a {
-    display: inline-block;
+    display: inline;
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
@@ -316,18 +360,18 @@ a {
     font-family: 'JetBrains Mono', monospace;
     font-size: 5rem;
     margin: 0 15px;
-    
+
 }
 
 
-   
+
 a:hover {
     color: var(--primary);
     text-shadow: 0 0 8px var(--primary);
 }
 
 footer {
-   
+
     text-align: center;
     padding: 10px;
     background: linear-gradient(to top, rgba(0, 255, 136, 0.1), transparent);
@@ -340,18 +384,24 @@ footer {
 
 /* ===== ANIMAÇÕES ===== */
 @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
         text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
     }
+
     50% {
         text-shadow: 0 0 40px rgba(0, 255, 136, 0.8), 0 0 60px rgba(0, 212, 255, 0.5);
     }
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -362,6 +412,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -373,20 +424,26 @@ footer {
     #hero h1 {
         font-size: 2.5rem;
     }
-    
+    .foto-perfil {
+        max-width: 220px;
+    }
+
     #hero p {
         font-size: 1.2rem;
     }
-    
+
     #projetos h2 {
         font-size: 2rem;
     }
-    
+    p {
+        font-size: 18px;
+    }
+
     #projetos h2::before,
     #projetos h2::after {
         display: none;
     }
-    
+
     nav ul {
         gap: 20px;
         flex-wrap: wrap;
