@@ -163,7 +163,7 @@ nav a:hover {
 
 .foto-perfil {
     max-width: 300px;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 5px solid var(--border-color);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
     margin-bottom: 30px;
@@ -254,9 +254,10 @@ nav a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 15px 0;
+    margin: 20px 0;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
+    display: block;
 }
 
 .projeto img:hover {
@@ -284,45 +285,89 @@ nav a:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 40px rgba(0, 255, 136, 0.6), 0 0 80px rgba(0, 212, 255, 0.3);
 }
+#softskills {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#softskills h2 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#softskills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#softskills li {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+#softskills li:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
 
 /* ===== SEÇÃO CERTIFICADOS ===== */
 #Area-de-certificação {
-    margin-left: 200px;
     max-width: 1200px;
-    margin-top: 30px;
-    margin-bottom: 15px; 
+    margin: 60px auto;
+    padding: 60px 20px;
     text-align: center;
-    position: absolute;
-
+    position: relative;
 }
 
 #Area-de-certificação h2 {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     color: var(--primary);
     font-family: 'JetBrains Mono', monospace;
     position: relative;
-    display: inline-block;
+    display: block;
     width: 100%;
+}
 
+.certificados {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .certificados img {
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
-    margin: 10px;
-    border: 1px solid var(--border-color);
-    position: relative;
+    border: 2px solid var(--border-color);
     cursor: pointer;
-    display: inline;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.certificados a {
+    display: inline-block;
+    margin: 0;
 }
 
 .certificados img:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5), inset 0 0 15px rgba(0, 255, 136, 0.1);
     transform: scale(1.05);
-    transition: all 0.3s ease;
 }
     
     
@@ -330,9 +375,13 @@ nav a:hover {
 
 /* ===== SEÇÃO CONTATO ===== */
 #contato {
-    padding: 80px 20px;
+    padding: 60px 20px;
     max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contato h2 {
@@ -343,29 +392,53 @@ nav a:hover {
     font-family: 'JetBrains Mono', monospace;
 }
 
+#contato p {
+    margin-bottom: 30px;
+}
+
 p {
     color: #b0b0b0;
     margin-bottom: 20px;
-    font-size: 25px;
-    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-a {
+/* Redes Sociais */
+#contato a {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+    margin: 0 20px;
+    border: 2px solid var(--border-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+#contato a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+a:not(#contato a) {
     display: inline;
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 5rem;
-    margin: 0 15px;
-
+    font-size: 1rem;
+    margin: 0;
 }
 
-
-
-a:hover {
+a:not(#contato a):hover {
     color: var(--primary);
     text-shadow: 0 0 8px var(--primary);
 }
@@ -424,6 +497,7 @@ footer {
     #hero h1 {
         font-size: 2.5rem;
     }
+
     .foto-perfil {
         max-width: 220px;
     }
@@ -432,9 +506,13 @@ footer {
         font-size: 1.2rem;
     }
 
-    #projetos h2 {
+    #projetos h2,
+    #Area-de-certificação h2,
+    #softskills h2,
+    #contato h2 {
         font-size: 2rem;
     }
+
     p {
         font-size: 18px;
     }
@@ -443,25 +521,17 @@ footer {
     #projetos h2::after {
         display: none;
     }
-    
-    }
-    #Area-de-certificação {
-        margin-left: 0;
-        position: static;
-        text-align: center;
-    }
-    .certificados {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+
     .certificados img {
-        display: block;
+        max-width: 250px;
     }
-   
 
     nav ul {
         gap: 20px;
         flex-wrap: wrap;
+    }
+
+    #softskills ul {
+        grid-template-columns: 1fr;
     }
 }
